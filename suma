@@ -1,0 +1,26 @@
+//Autor: Mauricio Miranda
+#include "stdafx.h"
+using namespace std;
+#include <iostream>
+
+
+
+
+int main()
+{
+	int a,b,suma;
+	cout<<"ingrese un valor"<<endl;
+
+	cin>>a;
+
+	cout<<"ingrese otro valor"<<endl;
+	cin>> b;
+
+	suma=a+b;
+
+
+	cout<<"la suma es:"<<suma <<endl;
+
+	return 0;
+}
+
