@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+int main()
+{
+	float p1, p2,p3,PP,f1,F,pro,PF,PromedioF;
+	cout<<"Ingrese la nota del  primer parcial: ";
+	cin>>p1;
+	cout<<"Ingrese la nota del segundo parcial: ";
+	cin>>p2;
+	cout<<"Ingrese la nota del tercer parcial: ";
+	cin>>p3;
+PP= ((p1+p2+p3)/3)*0.4;
+cout<<"El promedio total de la nota parcial es:"<<PP<<endl;
+cout<<"ingrese la nota del examen final:";
+cin>>f1;
+F=f1*0.4;
+	cout<<"ingrese la nota de su proyecto final:";
+		cin>>pro;
+PF=pro*0.2;
+	PromedioF= PP+F+PF;
+
+	
+	cout<<"El promedio final es: "<<PromedioF<<endl;
+	
+
+return 0;
+}
