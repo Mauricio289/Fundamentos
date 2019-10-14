@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{	int n,s=0;
+	float prom=0,acum=0;
+
+	cout<<"Digite el ultimo numero de impares: ";
+	cin>>n;
+	for(int i=0; i<n;i++)
+	{
+		cout<<i+1<<": "<<(2*i+1)<<endl; // Mostrando los números que se generan
+		acum=acum+(2*i+1); // Suma de impares acum=acum +2*i+1
+	}
+	prom=acum/n;
+	cout<<"el promedio es: "<<prom;
+	getch();
+}
