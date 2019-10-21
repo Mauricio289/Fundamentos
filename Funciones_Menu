@@ -1,0 +1,62 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+float calculoperimetro(float r);
+	float calculoarea(float r);
+	float calculovolumen(float r);
+
+
+
+int main()
+{
+	float r, Area;
+	int op;
+	do {
+		cout<<endl<<"ingresa el radio:";
+		cin>>r;
+
+		cout<<"=======MENU====="<<endl;
+		cout<<"1. Calcular el perimetro"<<endl;
+		cout<<"2. Calcular el area"<<endl;
+		cout<<"3. calcular el volumen"<<endl;
+		cout<<"4. Salir"<<endl;
+		cout<<"ingresar la opcion (1..4)"<<endl;
+		cin>>op;
+		switch(op) {
+		case 1: cout<< calculoperimetro(r);
+			break;
+		case 2: Area=calculoarea(r);
+			cout<<Area<<endl;
+			break;
+		case 3: Area=calculovolumen(r);
+			cout<<Area;
+			break;
+		case 4: cout<<"salir"<<endl;
+			break;
+		default: cout<<"error"<<endl;
+			break;
+		}
+	} while (op!=4);
+
+	return 0;
+
+}
+ float calculoperimetro(float r)
+ { float perimetro;
+ perimetro=2*3.141516*r;
+	 return perimetro;
+ }
+
+ float calculoarea(float r)
+ { float aux;
+
+aux=2*3.141516*r*r;
+return aux;
+ }
+
+ float calculovolumen(float r)
+ {
+	 float V=(4/3)*3.141516*r*r*r;
+	 return V;
+ }
