@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+float calculoArea(float r);
+
+
+
+
+int main()
+{
+	 float r;
+	cout<<"Ingrese el radio:";
+	cin>>r;
+	cout<<"El area de una circuferencia es:"<<calculoArea(r)<<endl;
+	return 0;
+}
+float calculoArea(float r)
+{float  Area;
+Area=3.1415*(r*r);
+
+	return Area;
+}
+
