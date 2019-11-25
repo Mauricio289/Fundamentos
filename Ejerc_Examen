@@ -1,0 +1,67 @@
+#include "stdafx.h"
+#include"conio.h"
+#include<iostream>
+using namespace std;
+int digito (int n);
+int seriesuma (int n);
+int serieproducto (int n);
+int main (){
+
+	int num,op,serie;
+	do{
+		cout<<"Ingrese el numero"<<endl;
+		cin>>num;
+		cout<<"----menu----"<<endl;
+		cout<<"1. Obtener el primer digito del numero"<<endl;
+		cout<<"2. suma de pares"<<endl;
+		cout<<"3. productos de los pares"<<endl;
+		cout<<"4. salir"<<endl;
+		cout<<"ingrese una opcion del (1..4)"<<endl;
+		cin>>op;
+	switch(op){
+	case 1: cout<<"el primer digito es: "<<digito(num)<<endl;
+		    break;
+    case 2: cout<<"la suma de pares es: "<<seriesuma (num)<<endl;
+		    break;
+	case 3: cout<<"El producto de los pares es: "<<serieproducto(num)<<endl;
+		    break;
+	case 4: cout<<"SALIR";
+		    break;
+	default: cout<<"ERROR"<<endl;
+		    break;
+	} 
+	}while(op!=4);
+	getch();
+	
+	
+}
+
+int digito (int n)
+{ int  d  ;
+
+while(n>0)
+{  
+   d=n %10;
+   n=n/10;
+}
+return d;
+}
+
+
+int seriesuma (int n)
+{int i=2,acum=0;
+while(i<=n){
+acum=acum+i;
+i=i+2;
+}
+return acum;}
+
+int serieproducto (int n)
+{ int i=2, acum=1;
+while(i<=n) {
+	acum=acum*i;
+	i=i+2;
+}
+return acum;
+}
+
