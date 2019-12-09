@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+bool VPrimo(int n);
+
+int main()
+{
+int n;
+bool primo;
+cout << "Ingresar N: ";
+cin >> n;
+primo = VPrimo(n);
+
+if (primo == true){
+	cout << "Es Primo" << endl;}
+else
+cout << "No es Primo" << endl;
+
+}
+bool VPrimo(int n) {
+bool primo = false;
+int i = 1, cont = 0;
+while (i <= n) {
+if (n % i == 0) {
+cont++;
+}
+i = i + 1;
+}
+if (cont == 2) {
+primo = true;
+}
+return primo;
+}
