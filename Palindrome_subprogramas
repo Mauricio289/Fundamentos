@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+
+void leerVChar(char*palabra,int n);
+void imprecVChar(char*palabra,int n);
+bool Espalindrome(char*A,int n);
+
+int main (void)
+{char palabra[30]; int n;
+cout<<"Tamaño de la palabra";
+cin>>n;
+leerVChar(palabra,n);
+imprecVChar(palabra,n);
+if(Espalindrome(palabra,n))
+{cout<<"Es palindrome"<<endl;}
+else
+{cout<<"No es palindrome"<<endl;}
+return 0;
+}
+	void leerVChar(char*A,int n)
+	{int i;
+	for(i=0;i<n;i++)
+	{cin>>A[i];}
+	}
+	void imprecVChar(char*A, int n)
+	{int i;
+	for(i=0;i<n;i++)
+	{cout<<A[i];}
+	}
+	bool Espalindrome(char*A, int n)
+	{int i;
+	for (i=0; i<n; i++)
+	{if (A[i]==A[n-i-1])
+	{}
+	else{return false;}
+	return true;}
+	}
